@@ -9,40 +9,46 @@
 body { background-color: var(--bg-dark); color: white; padding-bottom: 120px; }
 .yellow-text { color: var(--primary-yellow); }
 
-/* Branding & Sticky Header */
-.navbar { display: flex; justify-content: space-between; padding: 15px 20px; position: sticky; top: 0; background: rgba(10,14,23,0.9); backdrop-filter: blur(10px); z-index: 1000; align-items: center; }
+/* Header Fix */
+.navbar { display: flex; justify-content: space-between; padding: 15px 20px; position: sticky; top: 0; background: rgba(10,14,23,0.95); backdrop-filter: blur(15px); z-index: 1000; align-items: center; }
 .logo-box { background: var(--primary-yellow); padding: 5px; border-radius: 8px; }
-.call-btn-round { background: var(--primary-yellow); color: #000; padding: 10px; border-radius: 50%; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+.call-btn-round { background: var(--primary-yellow); color: #000; padding: 10px; border-radius: 50%; text-decoration: none; }
 .menu-btn { background: white; border: none; padding: 8px 12px; border-radius: 10px; font-size: 1.2rem; }
 
-/* Hero Section */
-.hero { padding: 40px 20px; text-align: center; }
-.badge { color: var(--primary-yellow); font-size: 10px; font-weight: 800; letter-spacing: 2px; }
-.hero h1 { font-size: 2.8rem; line-height: 1.1; margin: 20px 0; font-weight: 800; }
-.stats-row { display: flex; justify-content: space-around; margin-top: 30px; }
-.stat { font-size: 0.75rem; color: var(--text-grey); }
-.stat strong { color: var(--primary-yellow); font-size: 1.4rem; display: block; }
+/* Hero Gradient Fix */
+.hero { padding: 60px 20px; text-align: center; background: radial-gradient(circle at top, #1a202c, var(--bg-dark)); }
+.badge { color: var(--primary-yellow); font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+.hero h1 { font-size: 3.2rem; line-height: 1; margin: 25px 0; font-weight: 800; }
+.stats-row { display: flex; justify-content: space-around; margin-top: 40px; }
+.stat strong { color: var(--primary-yellow); font-size: 1.5rem; display: block; }
 
-/* White Card Styles */
-.booking-card { background: white; border-radius: 40px; padding: 25px; color: #000; margin: 0 20px; }
-.main-tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+/* Professional White Card */
+.booking-card { background: white; border-radius: 40px; padding: 30px; color: #000; margin: 0 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
 .tab { flex: 1; padding: 14px; border: 1px solid #eee; background: none; border-radius: 15px; font-weight: 700; font-size: 11px; }
-.tab.active { border: 2px solid #000; background: #fcfcfc; }
-.form-label { font-size: 10px; color: var(--text-grey); font-weight: 800; display: block; margin: 15px 0 5px; text-transform: uppercase; }
-.booking-input { width: 100%; padding: 16px; border-radius: 15px; border: 1px solid #eee; background: #fafafa; }
-.input-row { display: flex; gap: 12px; margin-top: 10px; }
-.input-group { flex: 1; }
-.quote-btn { width: 100%; background: #FFE580; border: none; padding: 20px; border-radius: 18px; margin-top: 25px; font-weight: 700; font-size: 15px; }
+.tab.active { border: 2px solid #000; background: #f8f9fa; }
+.booking-input { width: 100%; padding: 18px; border-radius: 15px; border: 1px solid #eee; background: #fafafa; margin-bottom: 15px; }
+.quote-btn { width: 100%; background: #FFE580; border: none; padding: 22px; border-radius: 20px; font-weight: 800; font-size: 16px; margin-top: 10px; }
 
-/* Bento & Floating Navigation */
-.bento-card { background: var(--primary-yellow); color: #000; border-radius: 35px; padding: 35px; margin: 20px; }
-.bento-icon { background: rgba(0,0,0,0.1); width: 50px; height: 50px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
-.floating-bar { position: fixed; bottom: 20px; left: 20px; right: 20px; display: flex; gap: 12px; z-index: 2000; }
-.bar-call { flex: 1; background: #000; color: #fff; border-radius: 25px; display: flex; align-items: center; justify-content: center; font-weight: 800; padding: 20px; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-.bar-wa { background: var(--wa-green); width: 70px; border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff; text-decoration: none; }
+/* Bento Fix */
+.bento-section { padding: 40px 20px; }
+.bento-card { border-radius: 35px; padding: 40px; margin-bottom: 20px; color: #000; }
+.bento-card.yellow { background: var(--primary-yellow); }
+.bento-card.white { background: white; }
+.bento-icon { background: rgba(0,0,0,0.1); width: 55px; height: 55px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 25px; }
 
-/* Footer Styling */
-footer { padding: 40px 20px; background: #05070A; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
-.footer-grid ul { list-style: none; margin-top: 15px; }
-.footer-grid li { margin-bottom: 10px; opacity: 0.8; font-weight: 600; font-size: 14px; }
+/* Destination Route Fix */
+.dest-card { background: white; border-radius: 45px; margin: 0 20px 30px; overflow: hidden; height: 350px; }
+.dest-img { height: 100%; background-size: cover; background-position: center; position: relative; display: flex; align-items: flex-end; }
+.dest-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,14,23,0.9), transparent 70%); }
+.dest-overlay { position: relative; z-index: 1; padding: 30px; color: white; width: 100%; }
 
+/* Fleet Showcase */
+.fleet-card { background: white; border-radius: 40px; margin: 0 20px 30px; padding: 30px; color: #000; position: relative; }
+.car-badge { position: absolute; top: 30px; left: 30px; background: #000; color: #fff; font-size: 10px; padding: 6px 14px; border-radius: 12px; font-weight: 700; }
+.fleet-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+.btn-yellow { background: var(--primary-yellow); border: none; padding: 20px; border-radius: 18px; font-weight: 800; }
+
+/* Floating Bar */
+.floating-bar { position: fixed; bottom: 25px; left: 20px; right: 20px; display: flex; gap: 15px; z-index: 2000; }
+.bar-call { flex: 1; background: #000; color: #fff; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-weight: 800; padding: 22px; text-decoration: none; box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
+.bar-wa { background: var(--wa-green); width: 75px; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #fff; text-decoration: none; }
